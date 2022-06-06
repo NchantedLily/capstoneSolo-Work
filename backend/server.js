@@ -24,6 +24,17 @@ connection.once('open', () => {
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+
+
+const lateNightBrewRouter = require('./routes/lateNightBrewPage');
+const foodRouter = require('./routes/foodPage');
+
+app.use('/lateNightBrew', lateNightBrewRouter);
+app.use('/food', foodRouter);
+
+
+
 app.listen(port, () =>{
     console.log(`Server is running on port ${port}`);
 });
