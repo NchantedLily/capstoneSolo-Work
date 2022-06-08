@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let Food = require('../models/food');
+let Food = require('../models/foodPage');
 
 
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const lateNightBrewPlaces = require('./routes/lateNightBrewPlaces');
 
 require('dotenv').config();
 
@@ -27,11 +28,13 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 
-const lateNightBrewRouter = require('./routes/lateNightBrewPage');
-const foodRouter = require('./routes/foodPage');
+// const lateNightBrewRouter = require('./routes/lateNightBrewPage');
+// const foodRouter = require('./routes/foodRestaurant');
+// const lateNightBrewPlacesRouter = require('./routes/lateNightBrewPlaces');
+// const foodRestaurantRouter = require('./routes/foodRestaurant');
 
-app.use('/lateNightBrew', lateNightBrewRouter);
-app.use('/food', foodRouter);
+// app.use('/lateNightBrew', lateNightBrewRouter);
+// app.use('/food', foodRouter);
 
 
 
